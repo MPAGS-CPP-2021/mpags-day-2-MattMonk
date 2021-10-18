@@ -30,7 +30,7 @@ int main(int argc, char* argv[])
     if (helpRequested) {
         // Line splitting for readability
         std::cout
-            << "Usage: mpags-cipher [-h/--help] [--version] [-i <file>] [-o <file>] [--encrypt] [--decrypt] [-k KEY]\n\n"
+            << "Usage: mpags-cipher [-h/--help] [--version] [-i <file>] [-o <file>] [--encrypt or -e] [--decrypt or -d] [-k KEY]\n\n"
             << "Encrypts/Decrypts input alphanumeric text using classical ciphers\n\n"
             << "Available options:\n\n"
             << "  -h|--help        Print this help message and exit\n\n"
@@ -39,9 +39,9 @@ int main(int argc, char* argv[])
             << "                   Stdin will be used if not supplied\n\n"
             << "  -o FILE          Write processed text to FILE\n"
             << "                   Stdout will be used if not supplied\n\n"
-            << "  --encrypt        Program will encrypt the text with\n"
+            << "  --encrypt or -e  Program will encrypt the text with\n"
             << "                   Caesar Cipher\n\n"
-            << "  --decrypt        Program will decrypt the text with\n"
+            << "  --decrypt or -d  Program will decrypt the text with\n"
             << "                   Casear Cipher\n\n"
             << "  -k KEY           Key for the Caesar cipher (number of\n"
             << "                   steps\n\n"
@@ -124,7 +124,6 @@ int main(int argc, char* argv[])
         std::cout << outputText << std::endl;
     }
     
-    //std::cout << "Encrypt? " << toEncrypt << " and key: " << key << std::endl;
 
     // No requirement to return from main, but we do so for clarity
     // and for consistency with other functions

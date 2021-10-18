@@ -75,7 +75,7 @@ bool processCommandLine(
                 ++i;
             }
         } 
-        else if (args[i] == "--encrypt") {
+        else if (args[i] == "--encrypt" || args[i] == "-e") {
             //Make sure --decrypt has not already been specified
             if (toEncrypt==0)
             {
@@ -87,7 +87,7 @@ bool processCommandLine(
                 toEncrypt = 1;
             }
         }
-        else if (args[i] == "--decrypt") {
+        else if (args[i] == "--decrypt" || args[i] == "-d") {
             //Make sure --encrypt has not already been specified
             if (toEncrypt==1)
             {
